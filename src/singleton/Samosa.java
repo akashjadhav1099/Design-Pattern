@@ -7,7 +7,9 @@ public class Samosa {
 	
 	//private constructor
 	private Samosa() {
-		
+		if(samosa!=null) {
+			throw new RuntimeException("You are trying to break singleton pattern");
+		}
 	}
 	
 //	// Lazy Way of initializing single object

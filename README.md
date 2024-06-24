@@ -11,3 +11,11 @@ Categorization Design Pattern:-
   3. Behavioural Design Pattern
          Observer Pattern, State Pattern, Iterator Pattern
 
+
+Factory Design Pattern:
+  When There is SuperClass and multiple subclasses and we want to get object of subclasses based on input and requirement
+  Then we create factory class which takes the responsibilty of creating object of class based on input
+  Advantages:
+    1. Focus on creating object for interface rather than implementation
+    2. Loose coupling. more robust code
+

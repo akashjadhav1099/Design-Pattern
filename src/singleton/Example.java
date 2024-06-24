@@ -25,7 +25,7 @@ public class Example {
 		 * how to break singleton pattern:
 		 * 1.using reflection Api
 		 * 	solution 1 : if object is there ==> throws exception from inside constructor
-		 * 
+		 *  solution 2: use enum
 		 * 
 		 * 
 		 * 
@@ -35,7 +35,7 @@ public class Example {
 		 * 
 		 */
 		
-		Samosa s1= Samosa.getSamosa();
+		Samosa s1= Samosa.instance;
 		System.out.println(s1.hashCode());
 		
 		Constructor<Samosa> constructor= Samosa.class.getDeclaredConstructor();

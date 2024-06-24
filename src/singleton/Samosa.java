@@ -1,17 +1,19 @@
 package singleton;
 
-public enum Samosa {
+import java.io.Serializable;
 
-	instance;
+public class Samosa implements Serializable {
+
+	//instance;
 	// static beacause static method will access only static variable
-//	private static Samosa samosa;
-//	
-//	//private constructor
-//	private Samosa() {
-//		if(samosa!=null) {
-//			throw new RuntimeException("You are trying to break singleton pattern");
-//		}
-//	}
+	private static Samosa samosa;
+	
+	//private constructor
+	private Samosa() {
+		if(samosa!=null) {
+			throw new RuntimeException("You are trying to break singleton pattern");
+		}
+	}
 	
 //	// Lazy Way of initializing single object
 //	//method is static so we dont need to create object for the method
@@ -35,16 +37,20 @@ public enum Samosa {
 //		return samosa;
 //	}
 	
-//	public static Samosa getSamosa() {
-//		if(samosa == null) {
-//			synchronized (Samosa.class) {
-//				if(samosa == null) {
-//					samosa= new Samosa();
-//				}
-//			}
-//		}
-//		return samosa;
-//	}
+	public static Samosa getSamosa() {
+		if(samosa == null) {
+			synchronized (Samosa.class) {
+				if(samosa == null) {
+					samosa= new Samosa();
+				}
+			}
+		}
+		return samosa;
+	}
+	
+	public Object readResolve() {
+		return samosa;
+	}
 }
 
 

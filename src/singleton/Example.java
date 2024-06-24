@@ -34,8 +34,7 @@ public class Example {
 		 * 2. using Deserialization
 		 * 	solution : implementing readResolve method
 		 * 
-		 * 
-		 * 
+		 * 3. cloning the object
 		 * 
 		 * 
 		 * 
@@ -54,13 +53,17 @@ public class Example {
 		Samosa samosa1 = Samosa.getSamosa();
 		System.out.println(samosa1.hashCode());
 		
-		ObjectOutputStream oos= new ObjectOutputStream(new FileOutputStream("abc.ob"));
-		oos.writeObject(samosa1);
+//		ObjectOutputStream oos= new ObjectOutputStream(new FileOutputStream("abc.ob"));
+//		oos.writeObject(samosa1);
+//		
+//		System.out.println("Serialization Done...");
+//		
+//		ObjectInputStream ois= new ObjectInputStream(new FileInputStream("abc.ob"));
+//		Samosa samosa2 = (Samosa) ois.readObject();
+//		System.out.println(samosa2.hashCode());
 		
-		System.out.println("Serialization Done...");
 		
-		ObjectInputStream ois= new ObjectInputStream(new FileInputStream("abc.ob"));
-		Samosa samosa2 = (Samosa) ois.readObject();
+		Samosa samosa2= (Samosa) samosa1.clone();
 		System.out.println(samosa2.hashCode());
 	}
 

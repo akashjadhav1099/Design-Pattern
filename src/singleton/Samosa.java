@@ -2,7 +2,7 @@ package singleton;
 
 import java.io.Serializable;
 
-public class Samosa implements Serializable {
+public class Samosa implements Serializable, Cloneable {
 
 	//instance;
 	// static beacause static method will access only static variable
@@ -48,8 +48,14 @@ public class Samosa implements Serializable {
 		return samosa;
 	}
 	
-	public Object readResolve() {
-		return samosa;
+//	public Object readResolve() {
+//		return samosa;
+//	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		//return super.clone();  //break singleton 
+		return samosa;  // will not break
 	}
 }
 

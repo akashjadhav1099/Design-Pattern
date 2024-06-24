@@ -6,10 +6,10 @@ public class Example {
 		// TODO Auto-generated method stub
 
 		//static method called using ClassName.methodName()
-		Samosa samosa1= Samosa.getSamsosa();
+		Samosa samosa1= Samosa.getSamosa();
 		System.out.println(samosa1.hashCode());
 		
-		Samosa samosa2= Samosa.getSamsosa();
+		Samosa samosa2= Samosa.getSamosa();
 		System.out.println(samosa2.hashCode());
 		
 		Jalebi jalebi1= Jalebi.getJalebi();

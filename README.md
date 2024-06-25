@@ -12,10 +12,19 @@ Categorization Design Pattern:-
          Observer Pattern, State Pattern, Iterator Pattern
 
 
-Factory Design Pattern:
-  When There is SuperClass and multiple subclasses and we want to get object of subclasses based on input and requirement
-  Then we create factory class which takes the responsibilty of creating object of class based on input
+Factory Design Pattern:-
+  When There is SuperClass and multiple subclasses and we want to get object of subclasses based on input and requirement.
+  Then we create factory class which takes the responsibilty of creating object of class based on input.
   Advantages:
-    1. Focus on creating object for interface rather than implementation
-    2. Loose coupling. more robust code
+    1. Focus on creating object for interface rather than implementation.
+    2. Loose coupling. more robust code.
+
+
+Builder Design Pattern:-
+  Used by Lombok internally to build objects.
+  While creating object when object contain many attributes, there are many problem exist:
+    1. We have to pass many argumemnts to create object.
+    2. some parameter might be optional.
+    3. Factory class takes all responsibility for creating object. If the object is heavy then all complexity is the part of factory class.
+  so, builder pattern create object step by step amd finally return final object with desired value of attributes.
 

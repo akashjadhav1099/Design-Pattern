@@ -28,3 +28,6 @@ Builder Design Pattern:-
      c. Factory class takes all responsibility for creating object. If the object is heavy then all complexity is the part of factory class.
   3. so, builder pattern create object step by step amd finally return final object with desired value of attributes.
 
+Prototype Design Pattern:-
+  1. The concept is to copy an existing object rather than creating  a new instance from scratch. because creating new object will be costly.
+  2. This approach will save cost, resources and time, especially when object creation is heavy process.

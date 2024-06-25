@@ -23,8 +23,8 @@ Factory Design Pattern:-
 Builder Design Pattern:-
   1. Used by Lombok internally to build objects.
   2. While creating object when object contain many attributes, there are many problem exist:
-    1. We have to pass many argumemnts to create object.
-    2. some parameter might be optional.
-    3. Factory class takes all responsibility for creating object. If the object is heavy then all complexity is the part of factory class.
+     a. We have to pass many argumemnts to create object.
+     b. some parameter might be optional.
+     c. Factory class takes all responsibility for creating object. If the object is heavy then all complexity is the part of factory class.
   3. so, builder pattern create object step by step amd finally return final object with desired value of attributes.
 

@@ -32,7 +32,11 @@ Prototype Design Pattern:-
   1. The concept is to copy an existing object rather than creating  a new instance from scratch. because creating new object will be costly.
   2. This approach will save cost, resources and time, especially when object creation is heavy process.
 
-Observer Design Pattern:
+Observer Design Pattern:-
   1. It is behaviour design pattern.
   2. In this when object changes the state all its dependent objects notified the changes.
   3. one to many relation.
+
+Iterator Design Pattern:-
+  1. The iterator pattern provides a way to access the elements of an object without exposing its underlying implementation.
+  2. Used by Collection Framework Iterator.
